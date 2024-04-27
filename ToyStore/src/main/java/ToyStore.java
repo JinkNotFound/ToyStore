@@ -40,8 +40,8 @@ class ToyStore {
 
     public Toy getPrizeToy() {
         if (!prizeToys.isEmpty()) {
-            Toy prizeToy = prizeToys.poll(); // Получение игрушки с наибольшей вероятностью
-            allToys.get(prizeToy.getId()).setWeight(allToys.get(prizeToy.getId()).getWeight() - 1); // Уменьшение количества игрушки
+            Toy prizeToy = prizeToys.poll();
+            allToys.get(prizeToy.getId()).setWeight(allToys.get(prizeToy.getId()).getWeight() - 1);
             return prizeToy;
         }
         return null;
